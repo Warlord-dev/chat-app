@@ -1,0 +1,132 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  //text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+
+}
+
+.chat {
+  //height: calc(100% - 50px);
+  padding: 2rem;
+
+
+  .message {
+    width: 100%;
+    border: 2px #646cffaa solid;
+    border-radius: 4px;
+    margin-bottom: 4px;
+
+    .message-header {
+      display: flex;
+      justify-content: space-between;
+      background: #61dafbaa;
+      padding: 0 4px;
+
+      .message-like {
+        visibility: hidden;
+      }
+
+      &:hover .message-like {
+        visibility: initial;
+      }
+
+      .message-author, .message-likes, .message-like {
+        padding: 0 4px;
+        cursor: pointer;
+        &:hover {
+          background: rgba(59, 251, 211, 0.67);
+        }
+      }
+
+      .message-likes, .message-like {
+        &:before {
+          content: "⭐";
+        }
+      }
+    }
+
+    .message-body {
+      padding: 0 4px;
+    }
+  }
+}
+
+.write-message {
+  padding: 1rem 2rem;
+
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  //margin: 20px 0;
+  background: rgba(59, 251, 211, 0.67);
+
+  .message-input {
+    width: calc(100% - 4rem);
+  }
+}
+
+.bottom-spacer {
+  height: 110px;
+}
+
+.popup {
+  width: 400px;
+  height: 440px;
+  background: lavenderblush;
+  padding: 20px;
+  position: fixed;
+  top: 100px;
+  left: calc(50% - 200px);
+
+  .close {
+    text-align: center;
+    width: 1.4em;
+    height: 1.4em;
+    float: right;
+    background: rgba(59, 251, 211, 0.67);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
